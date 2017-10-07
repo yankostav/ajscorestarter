@@ -1,0 +1,341 @@
+
+<view-fader [isViewVisible]="isViewVisible">
+    <h2 class="feature-title">FEATURES</h2>
+
+    <div class="panel-group">
+        <div class="feature-list panel panel-default">
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="showOverview = !showOverview">Overview</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="showOverview" *ngIf="showOverview" class="list-group" style="margin: 25px; font-size: 18px;">
+                This document details the features of the Angular.Net Starter App used in the course titled "Angular and ASP.Net Core Productivity Playbook". By using the techniques described in the course, you are already further ahead of where you would be by starting from scratch. In fact, in terms of a projects lifecycle, the techniques used in the Angular.Net Starter App will put you months beyond where you would be not knowing these techniques.
+                <br /><br />
+                Unlike many developer, I spend much time analyzing the workflow and looking for shortcuts to developing an application. The key is automation. A little upfront time, researching and analyzing the workflow, will save you months of development time later. And that is what I can share with you. I've spent months, not only looking for shortcuts to make the development quicker, but also to enhance the performance, and make the application easier to maintain.
+                <br /><br />
+                As a Microsoft developer, you have become used to not having the need to drop down to the command line to perform an operation. By automating the development process, you will become less fatigued, and be able to spend your attention doing development.
+                <br /><br />
+                The target audience for the course and the Angular.Net Starter App is the ASP.Net Core Developer that would like to use Angular, which is Google's well documented and robust client-side framework.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="prerequisites = !prerequisites">Prerequisites and References</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="prerequisites" *ngIf="prerequisites" class="list-group" style="margin: 25px; font-size: 18px;">
+                In order to use the Angular.Net Starter App you will need to download and install NodeJS. By installing NodeJS you will automatically install NPM, the Node Package Manage. Here are some links:
+                <br />
+                <a href="https://nodejs.org/en" target="_blank" >NodeJs</a>
+                <br />
+                <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm" target="_blank" >How to Install</a>
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="compatibility = !compatibility">Compatibility</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="compatibility" *ngIf="compatibility" class="list-group" style="margin: 25px; font-size: 18px;">
+                The most compatible web applications will perform with all modern browsers. To ensure that, this feature-set supports all browsers that support ECMAScript 5 (ES5).
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="template = !template">Project Template</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="template" *ngIf="template" class="list-group" style="margin: 25px; font-size: 18px;">
+                When creating an ASP.Net Core project, you are given 2 chooses. The project template I have chosen is the ASP.Net Core Web Application with the .Net Core. This project template has the benefit of running on Linux, macOS as well as Windows using .Net Core. Then you have 2 more choses for what type of middleware, WebAPI or MVC. Since we have no need for MVC we will chose the WebAPI.
+                <br /><br />
+                By the way, since many Microsoft developer are coming from a background of MVC, you should know that Angular and MVC are mutually exclusive. As soon as you understand the full benefits of creating and allowing the Angular framework to handle the UI. Not only is it faster and easier to maintain, but it also embraces the web technologies. Sorry to say it, but you are going to have to understand web technologies to be a good, modern web developer.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="libraries = !libraries">3rd Party Libraries</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="libraries" *ngIf="libraries" class="list-group" style="margin: 25px; font-size: 18px;">
+                There are many 3rd party libraries already integrated into the Angular.Net Starter App, but easy to remove if there is no need for them. Also, there is no need for SignalR, or jQuery or any other dependency libraries. Each library is self-contained.
+                Following is a list of integrated libraries:
+                <br /><br />
+                bootstrap
+                <br />
+                ng2-toastr
+                <br />
+                font-awesome
+                <br />
+                rxjs
+                <br />
+                lodash
+                <br />
+                moment
+                <br />
+                file-saver
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="abstracting = !abstracting">Abstracting Debug from Release</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="abstracting" *ngIf="abstracting" class="list-group" style="margin: 25px; font-size: 18px;">
+                As an ASP.net Core developer you may not understand the significant difference between being in a debug development mode, or a release development mode. Well, guess what? There is a big difference! Once you realize that the sooner you will be productive. When you are developing your application, you are running locally with not too much latency. However, when you are running an application remotely there is a vast latency to be concerned about. This can be a rude awakening for many developer that are just getting into the technology.
+                <br /><br />
+                Visual Studio and ASP.Net Core make it easy to determine the development configuration mode that you are in and allow you to configure the outputting results according to the configuration mode. This is all handled in the Startup.cs file.
+                <br /><br />
+                Within the Startup.cs file we know what configuration mode we are in and this will determine which default.html file to serve up. Also there are some tricks you can play that will allow you to get to get to you node_modules without needing to copying them to the wwwroot folder.
+                <br /><br />
+                The Angular.Net Starter App already has these hooks and the course will detail these hooks.
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;1) Giving access to the node_modules in the Debug mode
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;2) Serving the appropriate default.html files depending on the configuration mode
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="restart = !restart">Automatic Restart</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="restart" *ngIf="restart" class="list-group" style="margin: 25px; font-size: 18px;">
+                When you are developing with client-side technologies such as Angular, you realize the benefit to being able to restart your application just by changing and saving your files. Unfortunately, when you create an ASP.Net project without choosing an MVC project template, you will not get this for free. I have implemented a simple solution involving gulp and a WebAPI endpoint that will watch for files changing, then automatically restarting your application once it detects changes. This is another huge timesaver.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="gulp = !gulp">Using Gulp to do the Heavy Lifting</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="gulp" *ngIf="gulp" class="list-group" style="margin: 25px; font-size: 18px;">
+                I would have never guessed that I was going to need NodeJS and Gulp to be an efficient application developer. Now I truly can't live without those 2 technologies. In case you didn't know, NodeJS comes with NPM, which is a repository for storing Node packages. And Gulp is a JavaScript task runner that lets you automate tasks. You can use Gulp tasks for everything from downloading any updated libraries to restarting your application anytime a file has changed. And you can bind these tasks to events, such as build events and Git event. In the course I will explore all the things that you can do to let NodeJS and Gulp do the heavy lifting.
+                <br /><br />
+                Also, as another feature of the Starter App, I have implemented an easier way to organize your gulpfile by breaking up into smaller, more manageable gulp files.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="streamline = !streamline">Automation to Streamline the Workflow</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="streamline" *ngIf="streamline" class="list-group" style="margin: 25px; font-size: 18px;">
+                By using Gulp and the Task Runner Explorer, we can bind to these events:
+                <br /><br />
+                1) Before Build
+                <br />
+                2) After Build
+                <br />
+                3) Clean
+                <br />
+                4) Project Opens
+                <br /><br />
+                By using Node and the git hooks, we can bind to these events:
+                <br /><br />
+                1) applypatch-msg
+                <br />
+                2) pre-applypatch
+                <br />
+                3) post-applypatch
+                <br />
+                4) pre-commit
+                <br />
+                5) prepare-commit-msg
+                <br />
+                6) commit-msg
+                <br />
+                7) post-commit
+                <br />
+                8) pre-rebase
+                <br />
+                9) post-checkout
+                <br />
+                10) post-merge
+                <br />
+                11) pre-receive
+                <br />
+                12) update
+                <br />
+                13) post-receive
+                <br />
+                14) post-update
+                <br />
+                15) pre-auto-gc
+                <br />
+                16) post-rewrite
+                <br />
+                17) pre-push
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="release = !release">Creating a Release Bundle</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="release" *ngIf="release" class="list-group" style="margin: 25px; font-size: 18px;">
+                The Angular.Net Starter App has many features that can make your application perform faster and make it easier to maintain. Creating a release bundle is one of them that does many things in one process. Within the Angular.Net Starter App, I am using the pre-commit git hook to automate the following tasks for the release bundle. Following is a list of all the benefits of creating a release bundle using the routines provided by the Angular.Net Starter App Release Bundler.
+                <br /><br />
+                1) Separates the framework from the application
+                <br />
+                2) Concatenate and bundle the framework with the 3rd party libraries
+                <br />
+                3) Minify the framework bundle
+                <br />
+                4) Squash the html and css into the components
+                <br />
+                5) Concatenate and bundle the application
+                <br />
+                6) Minify the application bundle
+                <br />
+                7) Creates the application manifest
+                <br />
+                8) Enabling the production mode
+                <br />
+                9) Creating an application manifest
+                <br />
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="bundling = !bundling">Bundling Techniques</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="bundling" *ngIf="bundling" class="list-group" style="margin: 25px; font-size: 18px;">
+                There are many bundling techniques which can reduce the download payload which in turn will increase the performance of an application. The one I favor has a completely different concept that is closer to how a desktop application works. The simple explanation is that there are 2 bundles. One for the framework and 3rd party libraries that will seldom change, and the other for the application, which will probably change frequently.
+                <br /><br />
+                This approach gives favor to the user that is returning to the application, and not the first time user.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="squashing = !squashing">Squashing the Html and Css</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="squashing" *ngIf="squashing" class="list-group" style="margin: 25px; font-size: 18px;">
+                With this technique it is possible to greatly reduce the download payload. Here is how it works. Most all Angular components have an associated html template URL and some have an associated css URL. These files are always easier to edit using you html and css editors. What the squashing process does is put a copy of the html and css into the component itself, and now there is no need to download the html and css files. Now you don't need to download the html and css files. This is a big performance gain.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="enableProdMode = !enableProdMode">EnableProdMode</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="enableProdMode" *ngIf="enableProdMode" class="list-group" style="margin: 25px; font-size: 18px;">
+                If you enable prod mode, your application will perform faster, but without useful information such as assertions. It's easy to implement but only make sense for a release build. I've implemented a hook into the release build that will insert the "EnableProdMode" into the App Module. Just another automation technique that will allow you to spend your attention on development.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="manifest = !manifest">Creating the Application Manifest</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="manifest" *ngIf="manifest" class="list-group" style="margin: 25px; font-size: 18px;">
+                I've given a lot of attention to the web technologies that enable applications to work off-line. This is something like have a web app that performs like a desktop app. The Angular.Net Starter App can perform most function while being complete disconnected from the Internet. This is currently implemented in the release build process and can be completely automated.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="reusingModules = !reusingModules">Productivity by Reusing Modules</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="reusingModules" *ngIf="reusingModules" class="list-group" style="margin: 25px; font-size: 18px;">
+                I've created and attached an animation module to the Angular.Net Starter App. In the course I will show you how to publish a library in the form of a module that can be reused across your enterprise. This will be a huge productivity gain.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="reusingGulpFiles = !reusingGulpFiles">Productivity by Using and Reusing Gulp Files</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="reusingGulpFiles" *ngIf="reusingGulpFiles" class="list-group" style="margin: 25px; font-size: 18px;">
+                As a proficient software developer, you are not going to want to start from scratch creating a new gulpfile, every time you start a new project. In the course I will show you how to organize your gulp task to be more maintainable, and how to publish your gulp files for reusing on other projects.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="debuggingGulp = !debuggingGulp">Debugging Gulp Files</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="debuggingGulp" *ngIf="debuggingGulp" class="list-group" style="margin: 25px; font-size: 18px;">
+                I have made it easy to debug gulp files by creating a supporting project titled DebugGulpfile. This supporting project will allow you to step into and debug your gulp files. All you need to do is start the project, then set a break point in the tasklist.js files execute method, then double-click on one of the task in the Task Runner Explorer. Make sure that you select the DebugGulpfile in the Task Runner Explorer before double-clicking.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="versioning = !versioning">Versioning the Application</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="versioning" *ngIf="versioning" class="list-group" style="margin: 25px; font-size: 18px;">
+                By using NodeJS, it possible bump up the version number. This can be automated by binding it a build event or to a git-hook. During the course I will demonstrate both bindings, and the technique for incrementing the version number using NodeJS and Gulp.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="exception = !exception">Exception Handling</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="exception" *ngIf="exception" class="list-group" style="margin: 25px; font-size: 18px;">
+                ASP.Net Core applications need a different method for returning exception data back to the Angular service. The Angular.Net Starter App implements a technique to return useful exception information back to the client, which is later stored on the client for analysis.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="parameters = !parameters">Passing Parameters to the Server</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="parameters" *ngIf="parameters" class="list-group" style="margin: 25px; font-size: 18px;">
+                ASP.Net Core applications use a different method for abstracting the application parameter. These type of parameter, such as connection string, used to be stored in the web.config. Now they are stored in the appsettings.json. This is also a good place to store the application version number.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="switches = !switches">Software Switches to Automate the Development Workflow</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="switches" *ngIf="switches" class="list-group" style="margin: 25px; font-size: 18px;">
+                Test switches can make development quicker by setting up your code in such a way to quickly return to an area in the application that you are currently implementing. This eliminate the need for repetitive keystroke and mouse clicks, just to get you to where you need to be in the application to continue working. I'll show you how in the course to make this possible and not running the risk that this test switches affect the production build.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="ooTechniques = !ooTechniques">Benefits using client-side OO Techniques</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="ooTechniques" *ngIf="ooTechniques" class="list-group" style="margin: 25px; font-size: 18px;">
+                Most ASP.Net developer understand the benefit of using object oriented techniques such as inheritance, and encapsulation, but don't understand how that is possible with JavaScript. With the advantage of TypeScript and transpilers this actually is pretty easy and give huge benefits to the integrity and maintainability of the application. The Angular.Net Starter App uses most of these object oriented techniques. Following is a list.
+                <br /><br />
+                1)	Strong data types
+                <br />
+                2)	Classes
+                <br />
+                3)	Modules
+                <br />
+                4)	Inheritance
+                <br />
+                5)	Accessibility (private/public)
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="performanceData = !performanceData">Saving and Displaying Errors and Performance Data on the Client</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="performanceData"  *ngIf="performanceData" class="list-group" style="margin: 25px; font-size: 18px;">
+                The Angular.Net Starter App has a feature for displaying the error that where generated on the server. This feature also displays performance data that is inserted into the code as Performance Markers. During the course we are going to use Microsoft Edge to display the Performance Markers, and show how to use the Performance feature of Microsoft Edge to store and analyze timing information.
+            </view-fader>
+
+            <div class="feature-heading panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:void(0);" style="font-size: 22px;" (click)="lastFeature = !lastFeature">Saving the Navigation to the Last Feature</a>
+                </h4>
+            </div>
+            <view-fader [isViewVisible]="lastFeature" *ngIf="lastFeature" class="list-group" style="margin: 25px; font-size: 18px;">
+                This may not seem like a big deal, but sometimes it is best to pick-up where you left off using an application. So by saving the last feature that was used before exiting, it's possible to return to that feature when the application is launched again. I don't intend on explaining this feature in the course, but you can see by examining the source that the technology used is local storage.
+            </view-fader>
+
+        </div>
+    </div>
+
+</view-fader>

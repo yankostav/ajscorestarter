@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# VERSION: 3.0.7
+CACHE:
+./dist/application.3.0.7.js
+./dist/application.js
+./dist/bundle.3.0.0.css
+./dist/bundle.3.0.0.js
+./dist/bundle.css
+./dist/bundle.js
+./dist/images/angular4.png
+./dist/images/bk_drop_003.gif
+./dist/images/git-octocat.png
+./dist/images/gulp.png
+./dist/images/netcore.png
+./dist/images/node.png
+./dist/images/npm.png
+./dist/images/visualstudio.png
+./appcache.html
+./favicon.ico
+NETWORK:
+*

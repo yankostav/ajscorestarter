@@ -1,0 +1,13 @@
+{
+  "name": "debug-gulpfile",
+  "version": "0.0.0",
+  "description": "DebugGulpfile",
+  "main": "app.js",
+  "author": {
+    "name": "David"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "net": "^1.0.2"
+  }
+}

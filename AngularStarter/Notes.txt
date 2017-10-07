@@ -1,0 +1,11 @@
+﻿project template:  ASP.NET Core Web Application (.NET Core) WepApi
+
+normal workflow: bundle-css, concat-libraries, bundle-js, and one of these (bundle-app-debug, or bundle-app-release)
+
+Big time saver for publishing:
+Since you don't need the files in the wwwroot/app folder or the wwwroot/bundles folder, you can:
+Create another solution that uses the "Exclude for Project" on these folders
+
+POINT OF FAILURE:
+in gulpfile.js: realtime.localHostPort = "55419";
+This port number need to be the same as the app URL in the project setting in order for auto-restart to work properly

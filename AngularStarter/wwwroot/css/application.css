@@ -1,0 +1,158 @@
+﻿.app-title-color {
+  color: #006DCC;
+}
+.form-control {
+  -ms-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+.form-control:focus {
+  -ms-border-radius: 3px !important;
+  border-radius: 3px !important;
+  outline: 0 !important;
+}
+.input-required {
+  border-color: red;
+}
+.error-message {
+  color: red;
+}
+.icon-link {
+  color: #006DCC;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.icon-link:hover {
+  color: #006DCC;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.iconGroup {
+  background-color: #e8e8e8;
+  -ms-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.iconSelect {
+  margin: 5px;
+  color: #006DCC;
+}
+.statusTextArea {
+  background-color: #e8e8e8;
+  -ms-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.GridOutline {
+  border: 1px solid darkgrey;
+  -ms-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.GridHeader {
+  border: 1px solid darkgrey;
+  background-color: lightgrey;
+  padding: 5px;
+}
+.GridRow {
+  border: 1px solid darkgrey;
+}
+.GridCell {
+  border: 1px solid darkgrey;
+  padding: 5px;
+  background-color: white;
+}
+.GridCellSelected {
+  border: 1px solid darkgrey;
+  padding: 5px;
+  color: white;
+  background-color: #006DCC;
+}
+.GridLinkCell {
+  border: 1px solid darkgrey;
+  padding: 5px;
+  background-color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.GridLinkCellSelected {
+  border: 1px solid darkgrey;
+  padding: 5px;
+  color: white;
+  background-color: #006DCC;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.intentXml {
+  -ms-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.left-panel-pickist {
+  color: white;
+  background-color: #006DCC;
+  cursor: default;
+  max-width: 315px;
+  min-width: 315px;
+}
+.left-panel-pickist-item {
+  color: white;
+  background-color: #006DCC;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-panel-pickist-item:hover {
+  color: white;
+  background-color: #002D9C;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-panel-more-items {
+  color: white;
+  background-color: #006DCC;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-panel-more-items:hover {
+  color: white;
+  background-color: #006DCC;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.utility-label {
+  color: #006DCC;
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.utility-label:hover {
+  color: #002D9C;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-panel-icon {
+  margin-left: 5px;
+  float: right;
+}

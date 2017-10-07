@@ -1,0 +1,50 @@
+
+<view-fader [isViewVisible]="isViewVisible">
+    <h2 class="feature-title">Analytics</h2>
+    <span style="font-size: 25px;">
+        <span style="margin-left: 40%; font-weight: bold; ">Exceptions</span>
+        <span style="float: right;">
+            Errors Count: {{ac.analyticsData.exceptions.length}}
+            <button class="btn btn-primary" [disabled]="ac.analyticsData.exceptions.length === 0" style="width: 75px;" (click)="onClickClearErrors()">Clear</button>        
+        </span>&nbsp;&nbsp;
+    </span>
+    <div style="height: 10px;"></div>
+    <div class="panel-group">
+        <div class="panel-group">
+            <div class="panel panel-default" *ngFor="let exception of ac.analyticsData.exceptions">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <span>{{exception.dateString}}&nbsp;&nbsp;&nbsp;{{exception.timeString}}&nbsp;&nbsp;&nbsp;{{exception.errorMessage}}</span>
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <span style="font-size: 25px;">
+        <span style="margin-left: 40%; font-weight: bold; ">Performance</span>
+        <span style="float: right;">
+            Average Response Time: {{ac.analyticsData.averageResponseTime}}ms
+            <button class="btn btn-primary" [disabled]="ac.analyticsData.performances.length === 0" style="width: 75px;" (click)="onClickClearResponseTime()">Clear</button>
+        </span>&nbsp;&nbsp;
+    </span>
+    <div style="height: 10px;"></div>
+    <div class="panel-group">
+        <div class="panel-group">
+            <div class="panel panel-default" *ngFor="let performance of ac.analyticsData.performances">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <span>{{performance.dateString}}&nbsp;&nbsp;&nbsp;{{performance.timeString}}&nbsp;&nbsp;&nbsp;{{performance.responseTime}}ms</span>
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+
+    </div>    
+    
+
+
+</view-fader>
+   

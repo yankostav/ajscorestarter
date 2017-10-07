@@ -1,0 +1,21 @@
+﻿.feature-title {
+    color: rgba(51, 122, 183, 1);
+    background-color: rgba(223, 223, 223, 1);
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.feature-image {
+    margin-top: 100px;
+    width: 100%;
+    height: 100%; 
+}
+
+.expand-visible {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}

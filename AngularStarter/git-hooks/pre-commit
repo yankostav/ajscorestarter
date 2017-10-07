@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+"use strict";
+
+var pc = require('./pre-commit.js');
+pc.preCommit("../.././AngularStarter/", "../Angular.Net/AngularStarter/");

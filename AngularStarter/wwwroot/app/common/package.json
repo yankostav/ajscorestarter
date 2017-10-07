@@ -1,0 +1,8 @@
+{
+  "name": "common-node_modules",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "ng2-animation": "^1.0.0"
+  }
+}

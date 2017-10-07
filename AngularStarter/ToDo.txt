@@ -1,0 +1,6 @@
+﻿Add and bind a gulp task for copying the pre-commit Git hook from git-hooks to .git/hooks
+
+Combine image into one file npm
+merge-img - npm
+merge-images - npm
+image-merge - npm

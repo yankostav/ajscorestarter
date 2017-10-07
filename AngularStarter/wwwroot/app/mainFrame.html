@@ -1,0 +1,31 @@
+<modal-dialog [isVisible]="showModalDialog">
+    <div style="text-align: center; ">
+        <label >Version No.: {{versionNumber}}</label>
+        <br />
+        <div>The date is: {{date.toLocaleDateString()}}</div>
+        <div>The time is: {{date.toLocaleTimeString()}}</div>
+        <div>This is the week of: {{theWeekOf}}</div>        
+    </div>
+
+</modal-dialog>
+
+<div style="margin: 20px;">
+    <view-fader [isViewVisible]="appLoaded">    
+    <div *ngIf="appLoaded" >
+        <a class="btn btn-default btn-sm" style="float: right; margin-left: 50px; margin-top: 7px;" (click)="onClickAbout();">About</a>
+        <nav class="btn-group" style="float: right; top: 7px; ">
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/restart'}" (click)="navigateTo('/restart')">Restart</a>
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/appcache'}" (click)="navigateTo('/appcache')">AppCache</a>
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/splash'}" (click)="navigateTo('/splash')">Splash</a>
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/settings'}" (click)="navigateTo('/settings')">Settings</a>
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/features'}" (click)="navigateTo('/features')">Features</a>
+            <a class="btn btn-default btn-sm" [ngClass]="{'btn-primary': selectedFeature == '/analytics'}" (click)="navigateTo('/analytics')">Analytics</a>
+        </nav>
+    </div>
+    </view-fader>
+    <view-blinker [blinking]="titleBlinking" [visibleWhenNotBlinking]="titleVisibleWhenNotBlinking">
+        <h1 style="text-align: center; overflow: hidden; ">{{appTitle}}</h1>
+    </view-blinker>
+
+    <router-outlet></router-outlet>
+</div>
