@@ -30,7 +30,7 @@ import { ModalDialog } from "./common/node_modules/ng2-animation/modalDialog";
 export class MainFrame {
     @ViewChild(ModalDialog) md: ModalDialog;
     
-    private appTitle = "Angular.Net Starter Application  3";
+    private appTitle = "Angular.Net Starter Application";
     private date: Date;
     private theWeekOf: string;
     private appHref: string;
