@@ -5,7 +5,7 @@ import { AnalyticsData, Exception, Performance } from "../models/analyticsData";
 
 export class BaseServices {
 
-    constructor(public http: Http) {
+    constructor(public readonly http: Http) {
         if (!this.getLocalStorage("analyticsData")) {
             const analyticsData = new AnalyticsData();
             analyticsData.exceptions = new Array<Exception>();

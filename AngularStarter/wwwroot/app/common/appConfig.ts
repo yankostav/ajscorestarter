@@ -14,7 +14,7 @@ export class AppConfig extends BaseServices {
     analyticsData: AnalyticsData;
     beginRequest: number;
 
-    constructor(public http: Http) {
+    constructor(public readonly http: Http) {
         super(http);
     }
 

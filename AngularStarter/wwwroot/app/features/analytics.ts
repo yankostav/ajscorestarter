@@ -13,7 +13,7 @@ export class Analytics {
     private isViewVisible = false;
     private analyticsData: AnalyticsData;
 
-    constructor(private ac: AppConfig) {
+    constructor(private readonly ac: AppConfig) {
         this.isViewVisible = true;
         ac.updateAnalytics();
     }

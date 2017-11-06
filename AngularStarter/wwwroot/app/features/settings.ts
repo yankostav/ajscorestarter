@@ -11,7 +11,7 @@ import { AppConfig } from "../../app/common/appConfig";
 export class Settings {
     private isViewVisible = false;
 
-    constructor(private config: AppConfig) {
+    constructor(private readonly config: AppConfig) {
         this.isViewVisible = true;
     }
 }

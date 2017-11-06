@@ -11,7 +11,7 @@ import { ToastsManager } from "ng2-toastr/ng2-toastr";
 })
 export class Features {
     private isViewVisible = false;
-    constructor(private config: AppConfig, private toastr: ToastsManager) {
+    constructor(private readonly config: AppConfig, private readonly toastr: ToastsManager) {
         this.isViewVisible = true;
     }
 }

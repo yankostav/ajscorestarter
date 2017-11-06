@@ -19,7 +19,7 @@ export class Splash {
     private image6Visible = false;
     private sequence = 0;
 
-    constructor(private config: AppConfig) {
+    constructor(private readonly config: AppConfig) {
         setTimeout(() => {
             this.isViewVisible = true;
         });
