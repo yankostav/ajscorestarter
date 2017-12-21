@@ -1,7 +1,7 @@
 CACHE MANIFEST
-# VERSION: 3.0.14
+# VERSION: 3.0.15
 CACHE:
-./dist/application.3.0.13.js
+./dist/application.3.0.14.js
 ./dist/application.js
 ./dist/bundle.3.0.0.css
 ./dist/bundle.3.0.2.js
