@@ -62,11 +62,11 @@ export class AppConfig extends BaseServices {
 
     getDevConfig(success, error) {
         this.beginRequest = new Date().getTime();
-        performance.mark("BEGIN REQUEST");
+        try { performance.mark("BEGIN REQUEST"); } catch (e) { }
         this.httpGet("sysInfo", (devConfig: DevConfig) => {
             this.logResonseData(new Date().getTime() - this.beginRequest);
             this.setLocalStorage("devConfig", devConfig);
-            performance.mark("REQUEST ENDED");
+            try { performance.mark("REQUEST ENDED"); } catch (e) { }
             (this.getLocalStorage("appFeatures")) ? devConfig.appCached = true : devConfig.appCached = false;
             this.devConfig = devConfig;
             this.devConfig.onlineStatus = true;
